@@ -45,9 +45,9 @@ Permite incorporar información externa, pero asume relaciones lineales y estabi
 
 SARIMAX añade componentes estacionales:
 
-\[
+$$
 ARIMA(p,d,q) \times (P,D,Q)_s
-\]
+$$
 
 Este modelo es adecuado para series con estacionalidad regular, aunque puede ser inestable ante quiebres estructurales.
 
@@ -57,30 +57,30 @@ Este modelo es adecuado para series con estacionalidad regular, aunque puede ser
 
 Prophet modela la serie como una suma de componentes estructurales:
 
-\[
+$$
 y(t) = g(t) + s(t) + h(t) + \varepsilon_t
-\]
+$$
 
 donde:
 
-- \( g(t) \): tendencia flexible (lineal o logística con *changepoints*)
-- \( s(t) \): estacionalidad modelada mediante series de Fourier
-- \( h(t) \): efectos de variables exógenas
-- \( \varepsilon_t \): ruido
+- $$ g(t) $$: tendencia flexible (lineal o logística con *changepoints*)
+- $$ s(t) $$: estacionalidad modelada mediante series de Fourier
+- $$ h(t) $$: efectos de variables exógenas
+- $$ \varepsilon_t $$: ruido
 
 #### Tendencia con puntos de cambio
 
-\[
+$$
 g(t) = (k + a(t)^T \delta)t + (m + a(t)^T \gamma)
-\]
+$$
 
 Esto permite capturar cambios estructurales sin necesidad de redefinir el modelo.
 
 #### Estacionalidad
 
-\[
+$$
 s(t) = \sum_{n=1}^{N} \left( a_n \cos \frac{2\pi nt}{P} + b_n \sin \frac{2\pi nt}{P} \right)
-\]
+$$
 
 Prophet es especialmente adecuado para series económicas con rupturas y cambios de régimen.
 
@@ -92,9 +92,9 @@ Prophet es especialmente adecuado para series económicas con rupturas y cambios
 
 Se implementó un esquema de ventana móvil de 36 meses, recalibrando el modelo continuamente:
 
-\[
+$$
 \hat{y}_{t+1} = f(y_{t}, y_{t-1}, X_t, X_{t-1})
-\]
+$$
 
 Este enfoque simula un escenario operativo realista, aunque presenta alta varianza del error.
 
@@ -104,9 +104,9 @@ Este enfoque simula un escenario operativo realista, aunque presenta alta varian
 
 ElasticNet combina penalizaciones L1 y L2:
 
-\[
+$$
 \min_{\beta} \left\{ \|y - X\beta\|^2 + \lambda \left( \alpha \|\beta\|_1 + (1-\alpha)\|\beta\|_2^2 \right) \right\}
-\]
+$$
 
 Ventajoso por su interpretabilidad, pero limitado al asumir relaciones lineales.
 
@@ -116,9 +116,9 @@ Ventajoso por su interpretabilidad, pero limitado al asumir relaciones lineales.
 
 XGBoost es un modelo de boosting basado en árboles:
 
-\[
+$$
 \mathcal{L} = \sum_i l(y_i, \hat{y}_i) + \sum_k \Omega(f_k)
-\]
+$$
 
 Capaz de capturar relaciones no lineales, pero requiere grandes volúmenes de datos y presenta menor interpretabilidad económica.
 
