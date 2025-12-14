@@ -63,10 +63,10 @@ $$
 
 donde:
 
-- $$ g(t) $$: tendencia flexible (lineal o logística con *changepoints*)
-- $$ s(t) $$: estacionalidad modelada mediante series de Fourier
-- $$ h(t) $$: efectos de variables exógenas
-- $$ \varepsilon_t $$: ruido
+-  g(t) : tendencia flexible (lineal o logística con *changepoints*)
+-  s(t) : estacionalidad modelada mediante series de Fourier
+-  h(t) : efectos de variables exógenas
+-  \varepsilon_t : ruido
 
 #### Tendencia con puntos de cambio
 
@@ -105,7 +105,7 @@ Este enfoque simula un escenario operativo realista, aunque presenta alta varian
 ElasticNet combina penalizaciones L1 y L2:
 
 $$
-\min_{\beta} \left\{ \|y - X\beta\|^2 + \lambda \left( \alpha \|\beta\|_1 + (1-\alpha)\|\beta\|_2^2 \right) \right\}
+\minimize_{\beta} \left\{ \|y - X\beta\|^2 + \lambda \left( \alpha \|\beta\|_1 + (1-\alpha)\|\beta\|_2^2 \right) \right\}
 $$
 
 Ventajoso por su interpretabilidad, pero limitado al asumir relaciones lineales.
