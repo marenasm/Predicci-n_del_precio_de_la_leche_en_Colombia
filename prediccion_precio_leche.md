@@ -35,9 +35,9 @@ Todas las series fueron agregadas mensualmente usando el día 1 de cada mes y se
 
 El modelo ARIMAX extiende el ARIMA tradicional incluyendo variables exógenas:
 
-\[
+$$
 y_t = \sum_{i=1}^p \phi_i y_{t-i} + \sum_{j=1}^q \theta_j \varepsilon_{t-j} + \beta X_t + \varepsilon_t
-\]
+$$
 
 Permite incorporar información externa, pero asume relaciones lineales y estabilidad estructural.
 
