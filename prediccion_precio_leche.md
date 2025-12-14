@@ -106,8 +106,7 @@ Este enfoque simula un escenario operativo realista, aunque presenta alta varian
 ElasticNet combina penalizaciones L1 y L2:
 
 $$
-\min_{\beta} \left\{ |y - X\beta|^2 
-+ \lambda \left( \alpha \|\beta\|_1 + (1-\alpha)\|\beta\|_2^2 \right) \right\}
+\min_{\beta} \left\{ |y - X\beta|^2 + \lambda \left( \alpha \|\beta\|_1 + (1-\alpha)\ \beta\|_2^2 \right) \right\}
 $$
 
 
