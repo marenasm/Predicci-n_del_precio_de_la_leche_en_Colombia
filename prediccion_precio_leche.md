@@ -63,12 +63,10 @@ $$
 
 donde:
 
-$$\begin{aligned}
-   g(t) &:\ \text{tendencia flexible (lineal o logística con changepoints)} \\
-   s(t) &:\ \text{estacionalidad modelada mediante series de Fourier} \\
-   h(t) &:\ \text{efectos de variables exógenas} \\
-   \varepsilon_t &:\ \text{ruido}
-\end{aligned}$$
+-  $g(t)$: tendencia flexible (lineal o logística con *changepoints*)  
+-  $s(t)$: estacionalidad modelada mediante series de Fourier  
+-  $h(t)$: efectos de variables exógenas  
+-  $\varepsilon_t$: ruido
 
 
 #### Tendencia con puntos de cambio
