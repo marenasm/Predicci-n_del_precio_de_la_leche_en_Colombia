@@ -63,10 +63,10 @@ $$
 
 donde:
 
--  g(t) : tendencia flexible (lineal o logística con *changepoints*)
+-  /[ g(t) ]/ : tendencia flexible (lineal o logística con *changepoints*)
 -  s(t) : estacionalidad modelada mediante series de Fourier
 -  h(t) : efectos de variables exógenas
--  \varepsilon_t : ruido
+-  /[ \varepsilon_t ]/: ruido
 
 #### Tendencia con puntos de cambio
 
