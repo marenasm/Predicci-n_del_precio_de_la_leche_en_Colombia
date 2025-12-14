@@ -1,0 +1,17 @@
+Metadata-Version: 2.4
+Name: homework
+Version: 0.1
+Requires-Dist: pytest
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-learn
+Requires-Dist: ipykernel
+Requires-Dist: seaborn
+Requires-Dist: statsmodels
+Requires-Dist: nbimporter
+Requires-Dist: nbformat
+Requires-Dist: lightgbm
+Requires-Dist: jinja2
+Requires-Dist: Prophet
+Requires-Dist: xgboost
+Dynamic: requires-dist
